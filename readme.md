@@ -3,6 +3,7 @@
 A simple interactive console-based implementation of the classic **Rock Paper Scissors** game. Players compete against the computer until one of them scores 5 points to determine the winner.
 
 ## Features
+
 - Play against the computer.
 - Tracks scores of both the player and the computer.
 - Announces the winner after the game ends.
@@ -11,6 +12,7 @@ A simple interactive console-based implementation of the classic **Rock Paper Sc
 ---
 
 ## How It Works
+
 1. The player chooses between **rock**, **paper**, or **scissors** via a prompt.
 2. The computer randomly selects its choice.
 3. The winner of each round is determined based on the following rules:
@@ -24,9 +26,11 @@ A simple interactive console-based implementation of the classic **Rock Paper Sc
 ---
 
 ## Technologies Used
+
 - **JavaScript**: Core programming language for implementing game logic.
 
 ---
 
 # Author
+
 Shafiriyu Roqeeb Taiwo, **Cynodev**.
