@@ -1,0 +1,28 @@
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #f3c4fb;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #7a4eab;
+}
+
+header img {
+  width: 80px;
+}
+
+header div {
+  display: flex;
+  gap: 20px;
+}
+
+.header-btn {
+  background-color: #fff275;
+  padding: 10px 30px;
+  border: 2px solid;
+  border-radius: 10px;
+}
