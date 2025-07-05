@@ -1,14 +1,15 @@
 body {
   margin: 0 auto;
   box-sizing: border-box;
-  background-color: #f3c4fb;
+  background-color: bisque;
+  font-family: sans-serif;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #7a4eab;
+  background-color: brown;
 }
 
 header img {
@@ -21,8 +22,59 @@ header div {
 }
 
 .header-btn {
-  background-color: #fff275;
+  background-color: #ff9f1c;
   padding: 10px 30px;
   border: 2px solid;
   border-radius: 10px;
+}
+
+/* The game styles */
+main {
+  margin: auto 150px;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.score-board h1 {
+  color: brown;
+  font-family: "Wendy One";
+  font-size: 50px;
+}
+
+.game-ui {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 10px;
+}
+
+.game-ui button {
+  border: none;
+  background-color: transparent;
+  font-size: 120px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.choice-buttons {
+  margin-top: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.choice-buttons button {
+  padding: 20px 40px;
+  background-color: brown;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  width: 200px;
 }
