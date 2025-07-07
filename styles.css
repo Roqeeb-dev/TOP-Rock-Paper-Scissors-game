@@ -28,6 +28,10 @@ header div {
   border-radius: 10px;
 }
 
+.header-btn:hover {
+  background-color: #d68008;
+}
+
 /* The game styles */
 main {
   margin: auto 150px;
@@ -37,6 +41,7 @@ main {
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  font-size: 20px;
 }
 
 .score-board h1 {
@@ -60,21 +65,6 @@ main {
   border-radius: 50px;
 }
 
-.choice-buttons {
-  margin-top: 125px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
-
-.choice-buttons button {
-  padding: 20px 40px;
-  background-color: brown;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 25px;
-  font-weight: bold;
-  width: 200px;
+.bigger {
+  transform: scale(1.1);
 }

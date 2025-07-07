@@ -26,34 +26,28 @@
     <main>
       <!-- The score board -->
       <div class="score-board">
-        <p><strong>Your score: </strong><span id="user-score"></span></p>
+        <p><strong>User score: </strong><span id="user-score"></span></p>
         <h1>Who wins?</h1>
         <p>
           <strong>Computer score: </strong><span id="computer-score"></span>
         </p>
       </div>
-      <!-- The game interface -->
+
+      <!-- The game interface: the rock, paper, scissors icon -->
       <div class="game-ui">
         <section id="user-section">
-          <button>✊</button>
-          <button>✋</button>
-          <button>✌️</button>
+          <button id="user-rock">✊</button>
+          <button id="user-paper">✋</button>
+          <button id="user-scissors">✌️</button>
         </section>
         <h2>VS</h2>
         <section id="computer-section">
-          <button>✊</button>
-          <button>✋</button>
-          <button>✌️</button>
+          <button id="computer-rock">✊</button>
+          <button id="computer-paper">✋</button>
+          <button id="computer-scissors">✌️</button>
         </section>
       </div>
-      <!-- The buttons to choose -->
-      <section class="choice-buttons">
-        <button id="rock-btn">Rock</button>
-        <button id="paper-btn">Paper</button>
-        <button id="scissors-btn">Scissors</button>
-      </section>
     </main>
-    <footer></footer>
-    <!-- <script src="scripts.js"></script> -->
+    <script src="rps.js"></script>
   </body>
 </html>
