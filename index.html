@@ -4,17 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Wendy+One&display=swap"
-      rel="stylesheet"
-    />
     <title>The Odin Project | Rock Paper Scissors game</title>
   </head>
   <body>
     <header>
-      <img src="rock-paper-scissors.png" alt="RPS Logo" id="Logo" />
+      <div class="logo-div">
+        <p>Rock, Paper, Scissors</p>
+        <img src="rock-paper-scissors.png" alt="RPS Logo" id="Logo" />
+      </div>
       <div>
         <button id="restart-game" class="header-btn">Restart Game</button>
         <button id="game-manual" class="header-btn">How to play?</button>
@@ -26,10 +23,14 @@
     <main>
       <!-- The score board -->
       <div class="score-board">
-        <p><strong>User score: </strong><span id="user-score"></span></p>
+        <p>
+          <strong>User score: </strong>
+          <span id="user-score"></span>
+        </p>
         <h1>Who wins?</h1>
         <p>
-          <strong>Computer score: </strong><span id="computer-score"></span>
+          <strong>Computer score: </strong>
+          <span id="computer-score"></span>
         </p>
       </div>
 
@@ -46,6 +47,12 @@
           <button id="computer-paper">✋</button>
           <button id="computer-scissors">✌️</button>
         </section>
+      </div>
+
+      <!-- The indicator text -->
+      <div class="indicator-text">
+        <p id="player-name">Player</p>
+        <p>Computer</p>
       </div>
     </main>
     <script src="rps.js"></script>
