@@ -12,17 +12,15 @@ let computerScissors = document.getElementById("computer-scissors");
 
 let scoreHeading = document.querySelector(".score-board h1");
 
-let userScore = document.getElementById("user-score");
-let computerScore = document.getElementById("computer-score");
-let userChoice, compChoice;
+let userScoreContent = document.getElementById("user-score-content");
+let computerScoreContent = document.getElementById("computer-score-content");
+let userChoice, compChoice, message;
+let isGameComplete = false;
 
-userScore.textContent = 0;
-computerScore.textContent = 0;
-userScore = 0;
-computerScore = 0;
-
-// let userName = prompt("What is your name?");
-// document.getElementById("player-name").textContent = userName;
+let userScore = 0;
+let computerScore = 0;
+userScoreContent.textContent = 0;
+computerScoreContent.textContent = 0;
 
 function getComputerChoice() {
   const computerChoiceArray = ["rock", "paper", "scissors"];
@@ -32,7 +30,6 @@ function getComputerChoice() {
 
 function compareChoices() {
   compChoice = getComputerChoice();
-
   if (userChoice === compChoice) {
     scoreHeading.textContent = "There is a tie !";
   } else if (
@@ -41,18 +38,36 @@ function compareChoices() {
     (userChoice === "paper" && compChoice === "rock")
   ) {
     userScore++;
-    userScore.textContent = userScore;
+    userScoreContent.textContent = userScore;
     scoreHeading.textContent = "Player wins!";
   } else {
     computerScore++;
-    computerScore.textContent = computerScore;
+    computerScoreContent.textContent = computerScore;
     scoreHeading.textContent = "Computer wins!";
+  }
+}
+
+function checkWhoWon(userScoreContent, computerScoreContent) {
+  if (userScoreContent > computerScoreContent) {
+    message = "Player won the game";
+    alert(message);
+  } else {
+    message = "Computer won the game";
+    alert(message);
+  }
+}
+
+function isGameOver(userScoreContent, computerScoreContent) {
+  if (userScoreContent >= 5 || computerScoreContent >= 5) {
+    alert("Game over!");
+    checkWhoWon(userScoreContent, computerScoreContent);
   }
 }
 
 userRock.addEventListener("click", () => {
   userChoice = "rock";
   compareChoices();
+  isGameOver(userScoreContent, computerScoreContent);
 });
 userPaper.addEventListener("click", () => {
   userChoice = "paper";
