@@ -21,8 +21,8 @@ computerScore.textContent = 0;
 userScore = 0;
 computerScore = 0;
 
-let userName = prompt("What is your name?");
-document.getElementById("player-name").textContent = userName;
+// let userName = prompt("What is your name?");
+// document.getElementById("player-name").textContent = userName;
 
 function getComputerChoice() {
   const computerChoiceArray = ["rock", "paper", "scissors"];
