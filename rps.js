@@ -14,8 +14,7 @@ let scoreHeading = document.querySelector(".score-board h1");
 
 let userScoreContent = document.getElementById("user-score-content");
 let computerScoreContent = document.getElementById("computer-score-content");
-let userChoice, compChoice, message;
-let isGameComplete = false;
+let userChoice, compChoice;
 
 let userScore = 0;
 let computerScore = 0;
@@ -49,17 +48,15 @@ function compareChoices() {
 
 function checkWhoWon(userScore, computerScore) {
   if (userScore > computerScore) {
-    message = "Player won the game";
-    alert(message);
+    alert("Player won the game!");
   } else {
-    message = "Computer won the game";
-    alert(message);
+    alert("Computer won the game!");
   }
 }
 
 function isGameOver(userScore, computerScore) {
   if (userScore >= 5 || computerScore >= 5) {
-    alert("Game over!");
+    scoreHeading.textContent = "GAME OVER!!";
     checkWhoWon(userScore, computerScore);
   }
 }
@@ -67,12 +64,15 @@ function isGameOver(userScore, computerScore) {
 userRock.addEventListener("click", () => {
   userChoice = "rock";
   compareChoices();
+  isGameOver(userScore, computerScore);
 });
 userPaper.addEventListener("click", () => {
   userChoice = "paper";
   compareChoices();
+  isGameOver(userScore, computerScore);
 });
 userScissors.addEventListener("click", () => {
   userChoice = "scissors";
   compareChoices();
+  isGameOver(userScore, computerScore);
 });
