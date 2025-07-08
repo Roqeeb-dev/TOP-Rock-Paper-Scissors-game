@@ -65,18 +65,28 @@ function isGameOver(userScore, computerScore) {
   }
 }
 
+function showWhichButtonPlayerClicked() {
+  document.getElementById(`user-${userChoice}`).classList.add("bigger");
+  setTimeout(() => {
+    document.getElementById(`user-${userChoice}`).classList.remove("bigger");
+  }, 500);
+}
+
 userRock.addEventListener("click", () => {
   userChoice = "rock";
+  showWhichButtonPlayerClicked();
   compareChoices();
   isGameOver(userScore, computerScore);
 });
 userPaper.addEventListener("click", () => {
   userChoice = "paper";
+  showWhichButtonPlayerClicked();
   compareChoices();
   isGameOver(userScore, computerScore);
 });
 userScissors.addEventListener("click", () => {
   userChoice = "scissors";
+  showWhichButtonPlayerClicked();
   compareChoices();
   isGameOver(userScore, computerScore);
 });
