@@ -47,8 +47,8 @@ function compareChoices() {
   }
 }
 
-function checkWhoWon(userScoreContent, computerScoreContent) {
-  if (userScoreContent > computerScoreContent) {
+function checkWhoWon(userScore, computerScore) {
+  if (userScore > computerScore) {
     message = "Player won the game";
     alert(message);
   } else {
@@ -57,17 +57,16 @@ function checkWhoWon(userScoreContent, computerScoreContent) {
   }
 }
 
-function isGameOver(userScoreContent, computerScoreContent) {
-  if (userScoreContent >= 5 || computerScoreContent >= 5) {
+function isGameOver(userScore, computerScore) {
+  if (userScore >= 5 || computerScore >= 5) {
     alert("Game over!");
-    checkWhoWon(userScoreContent, computerScoreContent);
+    checkWhoWon(userScore, computerScore);
   }
 }
 
 userRock.addEventListener("click", () => {
   userChoice = "rock";
   compareChoices();
-  isGameOver(userScoreContent, computerScoreContent);
 });
 userPaper.addEventListener("click", () => {
   userChoice = "paper";
