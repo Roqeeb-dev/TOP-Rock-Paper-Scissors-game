@@ -16,6 +16,10 @@ let userScoreContent = document.getElementById("user-score-content");
 let computerScoreContent = document.getElementById("computer-score-content");
 let userChoice, compChoice;
 
+let dialog = document.querySelector("dialog");
+let dialogText = document.querySelector("dialog p");
+let dialogButton = document.querySelector("dialog button");
+
 let userScore = 0;
 let computerScore = 0;
 userScoreContent.textContent = 0;
