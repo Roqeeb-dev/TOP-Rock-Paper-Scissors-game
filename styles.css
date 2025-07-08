@@ -82,6 +82,16 @@ main {
   border-radius: 50px;
 }
 
+dialog {
+  border: 2px solid;
+  text-align: center;
+}
+
+dialog button {
+  padding: 7px 15px;
+  background-color: beige;
+}
+
 .bigger {
   transform: scale(1.1);
 }

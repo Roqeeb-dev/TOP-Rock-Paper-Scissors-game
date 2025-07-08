@@ -51,10 +51,11 @@ function compareChoices() {
 }
 
 function checkWhoWon(userScore, computerScore) {
+  dialog.showModal();
   if (userScore > computerScore) {
-    alert("Player won the game!");
+    dialogText.innerHTML = `Player won the game by a margin of <strong>${userScore}</strong> to <strong>${computerScore}</strong>`;
   } else {
-    alert("Computer won the game!");
+    dialogText.innerHTML = `Computer won the game by a margin of <strong>${computerScore}</strong> to <strong>${userScore}</strong>`;
   }
 }
 
@@ -89,4 +90,12 @@ userScissors.addEventListener("click", () => {
   showWhichButtonPlayerClicked();
   compareChoices();
   isGameOver(userScore, computerScore);
+});
+
+dialogButton.addEventListener("click", () => {
+  dialog.close();
+  userScore = 0;
+  userScoreContent.textContent = userScore;
+  computerScore = 0;
+  computerScoreContent.textContent = computerScore;
 });
