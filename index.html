@@ -12,10 +12,17 @@
         <p>Rock, Paper, Scissors</p>
         <img src="rock-paper-scissors.png" alt="RPS Logo" id="Logo" />
       </div>
-      <div>
+      <div class="button-div">
         <button id="restart-game" class="header-btn">Restart Game</button>
         <a href="gameRules.html"
           ><button id="game-manual" class="header-btn">How to play?</button></a
+        >
+      </div>
+
+      <!-- The header button for mobile view -->
+      <div class="mobile-button-div">
+        <a href="gameRules.html"
+          ><button id="game-manual" class="header-btn">How to play</button></a
         >
       </div>
     </header>
@@ -34,6 +41,8 @@
           <span id="computer-score-content"></span>
         </p>
       </div>
+
+      <h2 class="mobile-scoreboard-h1">Who wins?</h2>
 
       <!-- The game interface: the rock, paper, scissors icon -->
       <div class="game-ui">

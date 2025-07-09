@@ -58,6 +58,14 @@ main {
   font-size: 50px;
 }
 
+.mobile-scoreboard-h1 {
+  display: none;
+}
+
+.mobile-button-div {
+  display: none;
+}
+
 .game-ui,
 .indicator-text {
   display: flex;
@@ -95,4 +103,40 @@ dialog button {
 
 .bigger {
   transform: scale(1.1);
+}
+
+@media (max-width: 500px) {
+  header {
+    justify-content: space-between;
+  }
+  .button-div {
+    display: none;
+  }
+  .score-board {
+    font-size: 16px;
+  }
+  .score-board h1 {
+    display: none;
+  }
+  .mobile-scoreboard-h1 {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    color: brown;
+    font-family: sans-serif;
+  }
+  .mobile-button-div {
+    display: block;
+    font-size: 15px;
+  }
+  .game-ui {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+  .game-ui button {
+    font-size: 70px;
+  }
+  main {
+    margin: 0;
+  }
 }

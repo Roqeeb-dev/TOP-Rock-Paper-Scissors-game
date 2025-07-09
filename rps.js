@@ -7,7 +7,7 @@ let computerPaper = document.getElementById("computer-paper");
 let computerScissors = document.getElementById("computer-scissors");
 
 let scoreHeading = document.querySelector(".score-board h1");
-
+let mobileScoreHeading = document.querySelector(".mobile-scoreboard-h1");
 let userScoreContent = document.getElementById("user-score-content");
 let computerScoreContent = document.getElementById("computer-score-content");
 let userChoice, compChoice;
@@ -31,6 +31,7 @@ function compareChoices() {
   compChoice = getComputerChoice();
   if (userChoice === compChoice) {
     scoreHeading.textContent = "There is a tie !";
+    mobileScoreHeading.textContent = "There is a tie !";
   } else if (
     (userChoice === "rock" && compChoice === "scissors") ||
     (userChoice === "scissors" && compChoice === "paper") ||
@@ -39,10 +40,12 @@ function compareChoices() {
     userScore++;
     userScoreContent.textContent = userScore;
     scoreHeading.textContent = "Player wins!";
+    mobileScoreHeading.textContent = "Player wins!";
   } else {
     computerScore++;
     computerScoreContent.textContent = computerScore;
     scoreHeading.textContent = "Computer wins!";
+    mobileScoreHeading.textContent = "Computer wins!";
   }
 }
 
@@ -57,7 +60,8 @@ function checkWhoWon(userScore, computerScore) {
 
 function isGameOver(userScore, computerScore) {
   if (userScore >= 5 || computerScore >= 5) {
-    scoreHeading.textContent = "GAME OVER!!";
+    scoreHeading.textContent = "GAME OVER!";
+    mobileScoreHeading.textContent = "GAME OVER!";
     checkWhoWon(userScore, computerScore);
   }
 }
