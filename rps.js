@@ -69,15 +69,6 @@ function showWhichButtonPlayerClicked() {
   }, 300);
 }
 
-function showComputerChoice() {
-  document.getElementById(`computer-${compChoice}`).classList.add("bigger");
-  setTimeout(() => {
-    document
-      .getElementById(`computer-${compChoice}`)
-      .classList.remove("bigger");
-  }, 300);
-}
-
 userRock.addEventListener("click", () => {
   userChoice = "rock";
   showWhichButtonPlayerClicked();
@@ -95,6 +86,38 @@ userScissors.addEventListener("click", () => {
   showWhichButtonPlayerClicked();
   compareChoices();
   isGameOver(userScore, computerScore);
+});
+
+// Making it keyboard accessible
+document.addEventListener("keydown", function (event) {
+  switch (event.key.toLowerCase()) {
+    case "r":
+      userChoice = "rock";
+      showWhichButtonPlayerClicked();
+      compareChoices();
+      isGameOver(userScore, computerScore);
+      break;
+    case "p":
+      userChoice = "paper";
+      showWhichButtonPlayerClicked();
+      compareChoices();
+      isGameOver(userScore, computerScore);
+      break;
+    case "s":
+      userChoice = "scissors";
+      showWhichButtonPlayerClicked();
+      compareChoices();
+      isGameOver(userScore, computerScore);
+      break;
+    case "n":
+      userScore = 0;
+      userScoreContent.textContent = userScore;
+      computerScore = 0;
+      computerScoreContent.textContent = computerScore;
+      break;
+    default:
+      break;
+  }
 });
 
 dialogButton.addEventListener("click", () => {
