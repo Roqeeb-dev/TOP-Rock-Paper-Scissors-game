@@ -1,7 +1,3 @@
-let gameRestarter = document.getElementById("game-rules");
-let gameManual = document.getElementById("game-manual");
-let gameRules = document.getElementById("game-rules");
-
 let userRock = document.getElementById("user-rock");
 let userPaper = document.getElementById("user-paper");
 let userScissors = document.getElementById("user-scissors");
@@ -70,7 +66,16 @@ function showWhichButtonPlayerClicked() {
   document.getElementById(`user-${userChoice}`).classList.add("bigger");
   setTimeout(() => {
     document.getElementById(`user-${userChoice}`).classList.remove("bigger");
-  }, 500);
+  }, 300);
+}
+
+function showComputerChoice() {
+  document.getElementById(`computer-${compChoice}`).classList.add("bigger");
+  setTimeout(() => {
+    document
+      .getElementById(`computer-${compChoice}`)
+      .classList.remove("bigger");
+  }, 300);
 }
 
 userRock.addEventListener("click", () => {
