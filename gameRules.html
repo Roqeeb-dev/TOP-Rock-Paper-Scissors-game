@@ -7,23 +7,48 @@
     <title>The Game rules page</title>
   </head>
   <body>
-    <section class="game-manual">
-      <div id="how-to-play">
-        <h2>How to Play <span>Rock, Paper, Scissors</span></h2>
-        <p>
-          Each player (you and the computer) chooses one of the three options:
-          Rock, Paper, or Scissors. You choose by clicking on either the rock,
-          paper or scissors.
-        </p>
+    <header>
+      <div class="logo-div">
+        <p>Rock, Paper, Scissors</p>
+        <img src="rock-paper-scissors.png" alt="RPS Logo" id="Logo" />
       </div>
+      <a href="index.html"
+        ><button id="return-button" class="header-btn">
+          Return to Game
+        </button></a
+      >
+    </header>
+
+    <main class="game-manual">
+      <div id="how-to-play">
+        <h2>How to Play</h2>
+        <ul>
+          <li>🎮 Choose your move: Rock 🪨, Paper 🧻, or Scissors ✂️</li>
+          <li>🤖 The computer will randomly pick one too!</li>
+          <li>
+            💥 Rock crushes Scissors, Scissors cuts Paper, Paper wraps Rock
+          </li>
+          <li>🏆 Win to earn points, 😵 Lose and try again!</li>
+          <li>🔄 First to 5 points wins the match!</li>
+        </ul>
+        <ul>
+          <li>✊ ~ Rock</li>
+          <li>✋ ~ Paper</li>
+          <li>✌️ ~ Scissors</li>
+        </ul>
+      </div>
+
+      <!-- Demarcation -->
       <div id="winning-rules">
         <h2>Winning rules</h2>
         <ul>
-          <li>Rock beats Scissors</li>
-          <li>Paper beats Rock</li>
-          <li>Scissors beats Paper</li>
+          <li>✊ Rock beats ✌️ Scissors</li>
+          <li>✋ Paper beats ✊ Rock</li>
+          <li>✌️ Scissors beats ✋ Paper</li>
         </ul>
       </div>
+
+      <!-- Demarcation -->
       <div id="draw">
         <h2>Draw</h2>
         <p>
@@ -31,6 +56,8 @@
           tie.
         </p>
       </div>
+
+      <!-- Demarcation -->
       <div id="how-to-score">
         <h2>Scoring</h2>
         <ul>
@@ -38,10 +65,12 @@
           <li>⚖️ No points for a tie</li>
         </ul>
       </div>
+
+      <!-- Demarcation -->
       <div id="how-to-win">
         <h2>How to win the game</h2>
-        <p>The first to reach 3 points wins the round.</p>
+        <p>The first player to reach 5 points wins the round.</p>
       </div>
-    </section>
+    </main>
   </body>
 </html>
