@@ -108,6 +108,7 @@ dialog button {
 @media (max-width: 500px) {
   header {
     justify-content: space-between;
+    padding-inline: 10px;
   }
   .button-div {
     display: none;
@@ -138,5 +139,8 @@ dialog button {
   }
   main {
     margin: 0;
+  }
+  .indicator-text {
+    display: none;
   }
 }
