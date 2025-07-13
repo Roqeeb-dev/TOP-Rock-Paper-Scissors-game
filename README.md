@@ -6,7 +6,7 @@ A simple and interactive Rock Paper Scissors game built using HTML, CSS, and Jav
 
 ## 🎮 Demo
 
-https://roqeeb-dev.github.io/TOP-Rock-Paper-Scissors-game/](#)
+https://roqeeb-dev.github.io/TOP-Rock-Paper-Scissors-game/
 
 ## 📸 Screenshots
 
